@@ -1,0 +1,304 @@
+/* 
+Inspired by many other grids out there.
+Version 1.2.5
+--increased width via haun's edits
+--added center_grid
+*/
+
+.container {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 1200px;
+    max-width: 100%;
+
+    &.slim {
+        width: 1100px;
+    }
+}
+
+/* Width variables
+--------------------------------------------- */
+$one-half: 48.245614035088%;
+$one-third: 30.994152046784%;
+$one-fourth: 22.368421052632%;
+$one-fifth: 17.19298245614%;
+$one-sixth: 13.74269005848%;
+$two-thirds: 65.497076023392%;
+$three-fourths: 74.122807017544%;
+$two-fifths: 37.894736842105%;
+$three-fifths: 58.59649122807%;
+$four-fifths: 79.298245614035%;
+$five-sixths: 82.748538011696%;
+$column-left-margin: 3.5087719298246%;
+
+/* Column Classes
+                Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css
+--------------------------------------------- */
+
+.five-sixths,
+.four-fifths,
+.one-fifth,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-fifths,
+.two-fifths,
+.two-thirds,
+.stay-column.five-sixths,
+.stay-column.one-fourth,
+.stay-column.one-half,
+.stay-column.one-sixth,
+.stay-column.one-third,
+.stay-column.three-fourths,
+.stay-column.two-sixths,
+.stay-column.two-thirds {
+    float: left;
+    margin-left: $column-left-margin;
+}
+
+.one-half,
+.stay-column.one-half {
+    width: $one-half;
+}
+
+.one-third,
+.stay-column.one-third {
+    width: $one-third;
+}
+
+.two-thirds,
+.stay-column.two-thirds {
+    width: $two-thirds;
+}
+
+.one-fourth,
+.stay-column.one-fourth {
+    width: $one-fourth;
+}
+
+.three-fourths,
+.stay-column.three-fourths {
+    width: $three-fourths;
+}
+
+.one-fifth,
+.stay-column.one-fifth {
+    width: $one-fifth;
+}
+
+.two-fifths,
+.stay-column.two-fifths {
+    width: $two-fifths;
+}
+
+.three-fifths,
+.stay-column.three-fifths {
+    width: $three-fifths;
+}
+
+.four-fifths,
+.stay-column.four-fifths {
+    width: $four-fifths;
+}
+
+.one-sixth,
+.stay-column.one-sixth {
+    width: $one-sixth;
+}
+
+.five-sixths,
+.stay-column.five-sixths {
+    width: $five-sixths;
+}
+
+.first,
+.stay-column.first {
+    clear: both;
+    margin-left: 0;
+}
+
+.five-sixths:first-child,
+.four-fifths:first-child,
+.one-fourth:first-child,
+.three-fifths:first-child,
+.two-fifths:first-child,
+.one-fifth:first-child,
+.one-half:first-child,
+.one-sixth:first-child,
+.one-third:first-child,
+.three-fourths:first-child,
+.two-thirds:first-child {
+    clear: both;
+    margin-left: 0;
+}
+
+@media only screen and (max-width: $first-break) {
+    .container,
+    #header .container {
+        width: 960px;
+    }
+}
+
+@media only screen and (max-width: $mobile-break) {
+    .five-sixths,
+    .one-fourth,
+    .one-half,
+    .one-sixth,
+    .one-third,
+    .three-fourths,
+    .two-thirds,
+    .one-fifth,
+    .two-fifths,
+    .three-fifths,
+    .four-fifths {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: $second-break) {
+    .container,
+    #header .container {
+        width: 100%;
+        padding: 0 5%;
+    }
+    .med-five-sixths,
+    .med-four-fifths,
+    .med-one-fifth,
+    .med-one-fourth,
+    .med-one-half,
+    .med-one-sixth,
+    .med-one-third,
+    .med-three-fourths,
+    .med-three-fifths,
+    .med-two-fifths,
+    .med-two-thirds {
+        clear: none;
+        float: left;
+        margin-left: $column-left-margin;
+    }
+
+    .med-one-half {
+        width: $one-half;
+    }
+
+    .med-one-third {
+        width: $one-third;
+    }
+
+    .med-two-thirds {
+        width: $two-thirds;
+    }
+
+    .med-one-fourth {
+        width: $one-fourth;
+    }
+
+    .med-three-fourths {
+        width: $three-fourths;
+    }
+
+    .med-one-fifth {
+        width: $one-fifth;
+    }
+
+    .med-two-fifths {
+        width: $two-fifths;
+    }
+
+    .med-three-fifths {
+        width: $three-fifths;
+    }
+
+    .med-four-fifths {
+        width: $four-fifths;
+    }
+
+    .med-one-sixth {
+        width: $one-sixth;
+    }
+
+    .med-five-sixths {
+        width: $five-sixths;
+    }
+
+    .med-first {
+        clear: both;
+        margin-left: 0;
+    }
+
+    .med-five-sixths:first-child,
+    .med-four-fifths:first-child,
+    .med-one-fourth:first-child,
+    .med-three-fifths:first-child,
+    .med-two-fifths:first-child,
+    .med-one-fifth:first-child,
+    .med-one-half:first-child,
+    .med-one-sixth:first-child,
+    .med-one-third:first-child,
+    .med-three-fourths:first-child,
+    .med-two-thirds:first-child {
+        clear: both;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: $mobile-small) {
+    .med-five-sixths,
+    .med-one-fourth,
+    .med-one-half,
+    .med-one-sixth,
+    .med-one-third,
+    .med-three-fourths,
+    .med-three-sixths,
+    .med-two-thirds,
+    .med-one-fifth,
+    .med-two-fifths,
+    .med-three-fifths,
+    .med-four-fifths {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+.clearfix::before,
+.clearfix::after,
+.container::before,
+.container::after,
+#main::before,
+#main::after,
+header::before,
+header::after {
+    content: '';
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.simpleClear {
+    clear: both;
+}
+
+.clear {
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+/* Box Sizing
+--------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}

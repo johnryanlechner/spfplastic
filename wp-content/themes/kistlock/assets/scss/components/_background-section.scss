@@ -1,0 +1,23 @@
+.bg-section {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    // override any other section padding that may be applied
+    padding: 88px 0 !important;
+
+    &__background {
+        z-index: -1;
+    }
+
+    .bg-section-header {
+        display: inline-block;
+        vertical-align: bottom;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__row {
+        clear: both;
+    }
+}

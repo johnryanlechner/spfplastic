@@ -1,0 +1,48 @@
+/* Numbered pagination */
+.posts {
+    .navigation {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navi-ul {
+        float: right;
+        padding: 0;
+        position: relative;
+    }
+    .navi-li {
+        float: left;
+        list-style-type: none;
+        margin-right: 8px;
+
+        &:before {
+            display: none;
+        }
+
+        a {
+            padding: 4px 8px;
+            text-decoration: none;
+        }
+    }
+    .navi-li {
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            color: #000;
+        }
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            a {
+                color: #fff;
+                background: #000;
+            }
+        }
+    }
+}

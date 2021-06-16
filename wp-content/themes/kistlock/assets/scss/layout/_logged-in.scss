@@ -1,0 +1,11 @@
+body.logged-in {
+    @media screen and (max-width: $laptop-m) {
+        .mobile-header {
+            top: 32px;
+        }
+    }
+
+    .mobile-menu {
+        top: 115px;
+    }
+}

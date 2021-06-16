@@ -1,0 +1,156 @@
+// hide non-keyboard focus styles
+.js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $mainColor;
+    margin: 8px 0 10px;
+    padding: 0;
+}
+
+// hide non-keyboard focus styles
+.js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
+}
+/* Adjust padding to match spacing of design */
+$padding: 56px;
+$mob-padding: 32px;
+$spacing: 32px;
+$mob-spacing: 24px;
+
+/* Spacing classes to be used with advanced-layout */
+.double-top-padding {
+    padding-top: 124px;
+
+    @media screen and (max-width: $mobile-break) {
+        padding-top: 64px;
+    }
+}
+.double-top-margin {
+    margin-top: $padding;
+
+    @media screen and (max-width: $mobile-break) {
+        margin-top: $mob-padding;
+    }
+}
+.single-top-padding {
+    padding-top: 32px;
+}
+.double-bot-padding {
+    padding-bottom: 124px;
+
+    @media screen and (max-width: $mobile-break) {
+        padding-bottom: 64px;
+    }
+}
+.double-bot-margin {
+    margin-bottom: $padding;
+
+    @media screen and (max-width: $mobile-break) {
+        margin-bottom: $mob-padding;
+    }
+}
+.single-bot-padding {
+    padding-bottom: 32px;
+}
+.double-padding {
+    padding-top: $padding;
+    padding-bottom: $padding;
+
+    @media screen and (max-width: $mobile-break) {
+        padding-top: $mob-padding;
+        padding-bottom: $mob-padding;
+    }
+}
+.double-margin {
+    margin-top: $padding;
+    margin-bottom: $padding;
+
+    @media screen and (max-width: $mobile-break) {
+        margin-top: $mob-padding;
+        margin-bottom: $mob-padding;
+    }
+}
+.single-padding {
+    padding-top: $mob-padding;
+    padding-bottom: $mob-padding;
+
+    @media screen and (max-width: $mobile-break) {
+        padding-top: $mob-padding/2;
+        padding-bottom: $mob-padding/2;
+    }
+}
+.no-top-padding {
+    padding-top: 1px;
+}
+.no-bot-padding {
+    padding-bottom: 1px;
+}
+.no-padding {
+    padding: 1px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $mainColor;
+    margin: 8px 0 10px;
+    padding: 0;
+}
+
+#primary-wrap .section-wrap:last-of-type {
+    position: relative;
+    padding: 164px 0 300px;
+    margin-bottom: -172px;
+    overflow: hidden;
+    z-index: 1;
+
+    @media screen and (max-width: $pre-ipad-break) {
+        padding: 96px 0 300px;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 2500px;
+        height: 100%;
+        background: $offWhite;
+        border-radius: 60%;
+        z-index: -1;
+
+        @media screen and (max-width: $pre-ipad-break) {
+            width: 1500px;
+        }
+    }
+
+    .button .button-text {
+        background: $offWhite;
+    }
+
+    &.testimonials-page-testimonials {
+        padding: 124px 0;
+        margin-bottom: 0;
+
+        &:before {
+            display: none;
+        }
+    }
+}

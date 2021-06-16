@@ -1,0 +1,119 @@
+.section-wrap.featured-testimonials .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: $pre-ipad-break) {
+        display: block;
+    }
+
+    .title-button-cell {
+        width: 30%;
+
+        @media screen and (max-width: $pre-ipad-break) {
+            width: 100%;
+            margin-bottom: 64px;
+        }
+
+        h2 {
+            position: relative;
+            margin-bottom: 48px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 52px;
+                height: 8px;
+                left: 0;
+                bottom: -24px;
+                background: $red;
+            }
+        }
+    }
+
+    .testimonials-cell {
+        width: 70%;
+        padding: 96px 64px;
+        background: $black;
+        position: relative;
+
+        @media screen and (max-width: $pre-ipad-break) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: $pre-ipad-break) {
+            padding: 96px 32px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -24px;
+            left: 60px;
+            width: 108px;
+            height: 77px;
+            background-image: url('assets/images/red-quote.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            @media screen and (max-width: $pre-ipad-break) {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .testimonial,
+        .name,
+        .title,
+        .employer {
+            color: #fff;
+        }
+
+        .name {
+            text-transform: uppercase;
+        }
+
+        ul.slick-dots {
+            position: absolute;
+            bottom: 24px;
+            right: 24px;
+            display: inline-block;
+            width: auto;
+            background: $offWhite;
+            margin: 0;
+            border-radius: 32px;
+            display: inline-flex !important;
+            align-items: center;
+            padding: 4px 8px;
+
+            @media screen and (max-width: $pre-ipad-break) {
+                right: auto;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            li {
+                position: relative;
+
+                button:before {
+                    content: '';
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border-radius: 50%;
+                    background: $black;
+                    width: 16px;
+                    height: 16px;
+                    opacity: 1;
+
+                    transition: background 0.3s ease-in-out;
+                }
+
+                &.slick-active button:before {
+                    background: $red;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,178 @@
+.mandr-form {
+    .validation_error,
+    .gf_progressbar {
+        display: none;
+        color: #fff;
+        border: none;
+    }
+
+    .gf_progressbar_title {
+        color: #fff;
+    }
+
+    .gform_body {
+        padding: 32px 32px 20px 32px;
+        position: relative;
+
+        &:before {
+            content: '';
+            visibility: hidden;
+            display: block;
+            height: 0;
+            clear: both;
+        }
+
+        &:after {
+            content: '';
+            visibility: hidden;
+            display: block;
+            height: 0;
+            clear: both;
+        }
+    }
+
+    input,
+    select,
+    textarea {
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        color: black;
+
+        &.button {
+            color: #fff;
+        }
+
+        option {
+            color: #fff;
+        }
+    }
+
+    select {
+        color: #fff;
+    }
+
+    textarea {
+        height: 100px !important;
+    }
+
+    select {
+        font-weight: 700;
+    }
+
+    @media screen and (max-width: $second-break) {
+        margin: 0 auto;
+    }
+
+    .gfield {
+        @media screen and (max-width: $mobile-break) {
+            position: relative;
+            float: none !important;
+            width: 100% !important;
+            margin: 0 auto !important;
+        }
+    }
+
+    .validation_message {
+        position: relative;
+        right: 16px;
+        top: 25%;
+        color: #fff;
+        text-align: right;
+        text-transform: uppercase;
+        font-weight: 700;
+        min-height: 50px;
+        margin: 0;
+        pointer-events: none;
+
+        @media screen and (max-width: $mobile-med) {
+            position: inherit;
+            left: 0;
+            right: auto;
+            min-height: 25px;
+            color: firebrick;
+        }
+
+        &:before {
+            content: '';
+            color: #fff;
+
+            @media screen and (max-width: $mobile-med) {
+                color: firebrick;
+            }
+        }
+    }
+
+    .gfield_error {
+        position: relative;
+
+        input,
+        select,
+        textarea {
+            background-color: firebrick;
+            color: #fff;
+        }
+
+        .instruction {
+            display: none;
+        }
+
+        ::-webkit-input-placeholder {
+            color: #fff;
+        }
+
+        :-moz-placeholder {
+            /* Firefox 18- */
+            color: #fff;
+        }
+
+        ::-moz-placeholder {
+            /* Firefox 19+ */
+            color: #fff;
+        }
+
+        :-ms-input-placeholder {
+            color: #fff;
+        }
+    } /* end .gfield_error */
+
+    /* Placeholders */
+    ::-webkit-input-placeholder {
+        color: #000;
+        opacity: 0.8;
+    }
+
+    :-moz-placeholder {
+        /* Firefox 18- */
+        color: #000;
+        opacity: 0.8;
+    }
+
+    ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #000;
+        opacity: 0.8;
+    }
+
+    :-ms-input-placeholder {
+        color: #000;
+        opacity: 0.8;
+    }
+
+    .gform_confirmation_message {
+        color: $black;
+        text-align: center;
+        font-size: 32px;
+        padding: 32px;
+    }
+
+    .gform_footer {
+        text-align: center;
+        padding-top: 32px;
+
+        .gform_button {
+            min-width: 165px;
+            margin-bottom: 0;
+        }
+    }
+} /* end .mandr-form (Gravity Forms) */

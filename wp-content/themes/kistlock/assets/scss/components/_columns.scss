@@ -1,0 +1,28 @@
+.columns {
+    &__variable {
+        .columns {
+            &__wrap {
+                display: flex;
+
+                @media screen and (max-width: $mobile-break){
+                    flex-wrap: wrap;
+                }
+            }
+        }
+
+        .column {
+            + .column {
+                margin-left: $column-left-margin;
+            }
+
+            @media screen and (max-width: $mobile-break){
+                width: 100%;
+                flex-basis: 100% !important;
+                
+                + .column {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

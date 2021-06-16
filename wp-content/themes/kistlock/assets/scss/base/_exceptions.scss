@@ -1,0 +1,71 @@
+body.page-contact-us #primary-wrap {
+    background: $offWhite;
+}
+
+body.page-testimonials #footer {
+    background: #fff;
+}
+
+body.page-testimonials .testimonial-outer {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 225px;
+        height: 225px;
+        background: $offWhite;
+        z-index: -1;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: -32px;
+        left: 60px;
+        width: 108px;
+        height: 77px;
+        background-image: url('assets/images/red-quote.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .testimonial {
+        padding: 64px 0 124px 64px;
+    }
+
+    &:last-of-type .testimonial {
+        padding-bottom: 64px;
+    }
+}
+
+body.page-contact-us .gform_wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+
+    ul.gform_fields {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        li.gfield {
+            width: 100%;
+            margin-bottom: 16px !important;
+
+            &#field_1_7,
+            &#field_1_8,
+            &#field_1_9,
+            &#field_1_2 {
+                width: 49%;
+            }
+        }
+    }
+
+    .gform_footer {
+        padding: 0;
+        margin: 0;
+    }
+}

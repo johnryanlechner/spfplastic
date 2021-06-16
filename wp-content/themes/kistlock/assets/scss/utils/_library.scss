@@ -1,0 +1,140 @@
+.row {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 100%;
+    height: auto;
+}
+
+.no-margin {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.bg-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.full {
+        width: 100%;
+        height: 100%;
+    }
+
+    &.fixed {
+        background-attachment: fixed;
+        background-position: 50% 0;
+    }
+}
+
+.sr-only,
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+/* Position object in center of parent */
+.abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+}
+
+/* Full width absolutely positioned image or area */
+.abs-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Hide on desktops */
+.desktop-hide {
+    @media (min-width: $mobile-break) {
+        display: none;
+    }
+}
+/* Hide on mobile */
+.mobile-hide {
+    @media (max-width: $mobile-break) {
+        display: none;
+    }
+}
+
+/**
+ * Center all elements in container using flex 
+ * Still a little buggy in IE, so be sure to check
+ */
+.center-flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    @media (max-width: $mobile-med) {
+        display: block;
+    }
+}
+
+/* Set print style sheet if necessary */
+@media print {
+    p,
+    ul li,
+    ol li {
+        display: inline-block;
+        width: 100%;
+        max-width: 60%;
+    }
+
+    h1,
+    h2,
+    h3 {
+        display: inline-block;
+        width: 100%;
+        max-width: 60%;
+        font-size: 24px;
+        overflow-wrap: break-word;
+    }
+
+    #header,
+    #footer {
+        display: none !important;
+    }
+
+    .single {
+        .aligncenter {
+            float: left;
+        }
+
+        .one-half,
+        .one-third,
+        .one-fourth,
+        .two-thirds,
+        .three-fourths {
+            float: none;
+            width: 100%;
+        }
+    }
+}

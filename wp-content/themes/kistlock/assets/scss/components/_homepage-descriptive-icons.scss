@@ -1,0 +1,68 @@
+section.home-descriptive-icons {
+    position: relative;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 36px;
+    }
+
+    .inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media screen and (max-width: $mobile-med) {
+            display: block;
+        }
+
+        .icon-cell {
+            width: 30%;
+            margin-bottom: 64px;
+
+            @media screen and (max-width: $mobile-med) {
+                width: 100%;
+                display: flex;
+                margin-bottom: 24px;
+
+                .icon {
+                    overflow: hidden;
+                    width: 10%;
+                    margin-bottom: 0 !important;
+                }
+
+                .description {
+                    width: 90%;
+                    text-align: left;
+                    padding-left: 24px;
+                }
+            }
+
+            .icon {
+                max-width: 55px;
+                max-height: 52px;
+                width: auto;
+                display: block;
+                margin: 0 auto 36px;
+                position: relative;
+
+                /*  
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 52px;
+                    height: 8px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: -24px;
+                    background: $red;
+                }
+ */
+                img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

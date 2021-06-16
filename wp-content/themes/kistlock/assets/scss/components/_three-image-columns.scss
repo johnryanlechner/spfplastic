@@ -1,0 +1,42 @@
+section.section-wrap.three-column-images {
+    position: relative;
+    z-index: 1;
+
+    &.mixed:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: $black;
+    }
+
+    .inner {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: $pre-ipad-break) {
+            display: block;
+        }
+
+        .image-cell {
+            width: 32%;
+
+            @media screen and (max-width: $pre-ipad-break) {
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto 32px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}

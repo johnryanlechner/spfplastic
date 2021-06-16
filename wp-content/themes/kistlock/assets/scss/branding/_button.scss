@@ -1,0 +1,107 @@
+button.button,
+button.content-limiter-expander,
+input[type='button'],
+input[type='reset'],
+input[type='submit'],
+.button {
+    width: auto;
+    color: #000;
+    background: transparent;
+    cursor: pointer;
+    padding: 16px 32px 16px 64px;
+    border: none;
+    border-radius: none;
+    box-shadow: none;
+    transform-style: preserve-3d;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 0px;
+        height: 50px;
+        background: $red;
+
+        transition: width 0.3s ease-in-out;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        width: 50px;
+        height: 50px;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        border: solid 2px $red;
+        background-image: url('assets/images/button-arrow-black.svg');
+        background-size: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+
+        transition: background 0.3s ease-in-out;
+    }
+
+    span.button-text {
+        position: relative;
+        display: block;
+        background: #fff;
+        transform: translateX(-20px);
+        z-index: 3;
+
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+        &:before {
+            content: '';
+            width: 50px;
+        }
+
+        span.button-text {
+            transform: translateX(0px);
+        }
+
+        &:after {
+            background-image: url('assets/images/button-arrow-white.svg');
+        }
+    }
+}
+
+.button {
+    display: inline-block;
+    margin-bottom: 24px; /* match p margin-bottom inside typography.scss */
+}
+
+.center-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p.centered-button {
+    text-align: center;
+}
+
+/* Hide button mobile text on desktops */
+.mobile-text {
+    display: none;
+
+    @media (max-width: $mobile-break) {
+        display: block;
+    }
+}
+
+/* Hide button desktop text on mobile */
+.mobile-text + .text-wrap {
+    @media (max-width: $mobile-break) {
+        display: none;
+    }
+}
