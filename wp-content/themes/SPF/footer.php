@@ -1,45 +1,28 @@
 </div>
 <footer id="footer" role="contentinfo">
-    <div class="address-cell cell">
-        <?php
-            $address = get_field( 'mandr_address', 'options' );
-            $address_link = get_option( 'options_mandr_address_link' );
-        ?>
-        <div class="inner">
-            <a href="<?= $address_link ?>" newtab="true"><?= $address ?></a>
-        </div>
+    <a href="<?php bloginfo('url'); ?>/" class="footer-logo">
+        <img src="<?php bloginfo('template_url'); ?>/assets/images/logo-white.png" alt="<?php echo bloginfo('name'); ?> logo" />
+    </a>
+    <div class="quicklinks">
+        <h3>Quicklinks</h3>
+        <nav class="quicklinks">
+            <?php 
+                wp_nav_menu( array(
+                    'container'       => 'ul', 
+                    'menu_class'      => 'sf-menu clearfix', 
+                    'menu_id'         => 'quicklinks',
+                    'depth'           => 0,
+                    'theme_location' => 'quicklinks' 
+                )); 
+            ?>
+        </nav>
     </div>
-    <div class="logo-cell cell">
-        <div class="inner">
-            <a href="<?php bloginfo('url'); ?>/">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/footer-logo.svg" alt="<?php echo bloginfo('name'); ?> logo" />
-            </a>
-            <div id="footer-copyright">
-                <?= do_shortcode( get_option( 'options_contact_info' ) ); ?>
-            </div>
-        </div>
+    <div class="contact-info">
+        <h3>Contact</h3>
+        <?= get_template_part('template-parts/contact-info'); ?>
     </div>
-    <div class="phone-fax-email-cell cell">
-        <?php
-            $phone = get_option( 'options_mandr_phone' );
-            $fax = get_option( 'options_mandr_fax' );
-            $email = get_option( 'options_mandr_email' );
-        ?> 
-        <div class="inner">
-            <div class="contact">
-                <?php if( $phone ) : ?>
-                    <a href="tel:<?= $phone ?>" class="phone">P: <?= $phone ?></a>
-                <?php endif; ?>
-                <?php if( $fax ) : ?>
-                    <a href="<?= $fax ?>" class="fax">F: <?= $fax ?></a>
-                <?php endif; ?>
-                <?php if( $email ) : ?>
-                    <a href="mailto:<?= $email ?>" class="email"><?= $email ?></a>
-                <?php endif; ?>
-            </div>
-        </div>
-    </div>
-    <div id="footer-copyright-mobile">
+    <?= get_template_part('template-parts/social-links'); ?>
+    <div id="footer-copyright">
         <?= do_shortcode( get_option( 'options_contact_info' ) ); ?>
     </div>
 </footer>

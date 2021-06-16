@@ -1,105 +1,21 @@
 #footer {
     position: relative;
-    z-index: 2;
-    background: $offWhite;
-    display: flex;
-    justify-content: space-between;
+    background: $red;
+    padding: 44px 0 12px;
 
-    @media screen and (max-width: $pre-ipad-break) {
-        flex-wrap: wrap;
+    a.footer-logo {
+        display: block;
+        width: 100%;
+        max-width: 580px;
+        margin: 0 auto;
     }
 
-    .cell {
-        width: 32.333%;
-        background: $black;
+    a {
+        color: #fff;
 
-        @media screen and (max-width: $pre-ipad-break) {
-            width: 100%;
-
-            &.logo-cell .inner {
-                padding: 64px 24px;
-            }
-
-            &.address-cell {
-                margin: 16px 0;
-            }
-        }
-
-        .inner {
-            display: flex;
-            flex-wrap: wrap;
-            min-height: 255px;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-            padding: 24px;
-
-            @media screen and (max-width: $pre-ipad-break) {
-                min-height: 115px;
-            }
-
-            * {
-                width: 100%;
-            }
-
-            a {
-                color: #fff;
-                text-decoration: underline;
-
-                &.email {
-                    font-style: italic;
-                }
-
-                &:hover,
-                &:focus {
-                    color: $red;
-                }
-            }
-
-            #footer-copyright {
-                font-size: 14px;
-                color: #fff;
-
-                a {
-                    text-decoration: none;
-                }
-
-                @media screen and (max-width: $pre-ipad-break) {
-                    display: none;
-                }
-            }
-
-            .contact a {
-                display: block;
-                width: 100%;
-            }
-        }
-
-        &.logo-cell img {
-            max-width: 270px;
-            margin: 0 auto;
-            display: block;
-        }
-
-        @media screen and (max-width: $pre-ipad-break) {
-            &.logo-cell {
-                order: -1;
-            }
-        }
-    }
-
-    #footer-copyright-mobile {
-        display: none;
-
-        @media screen and (max-width: $pre-ipad-break) {
-            display: block;
-            text-align: center;
-            padding: 24px;
-
-            a {
-                color: #000;
-            }
+        &:hover,
+        &:focus {
+            color: $black;
         }
     }
 } /* end #footer */

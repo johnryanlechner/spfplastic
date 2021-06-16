@@ -8,7 +8,6 @@ body {
     background-color: $color-background;
     color: $textColor;
     font-family: 'Open Sans', sans-serif;
-    font-family: futura-pt, sans-serif;
     font-size: 22px;
     font-weight: 400;
     line-height: 1.45;
@@ -83,9 +82,9 @@ h5,
 .h5,
 h6,
 .h6 {
-    font-family: 'Open Sans', sans-serif;
-    font-family: futura-pt-bold, sans-serif;
-    font-weight: 700;
+    font-family: anton, sans-serif;
+    font-weight: 400;
+    font-style: normal;
     line-height: 1.2;
     margin: 0 0 16px;
 
@@ -118,19 +117,27 @@ h2,
 }
 h3,
 .h3 {
+    font-family: montserrat, sans-serif;
     font-size: 24px;
+    font-weight: 700;
 }
 h4,
 .h4 {
+    font-family: montserrat, sans-serif;
     font-size: 20px;
+    font-weight: 700;
 }
 h5,
 .h5 {
+    font-family: montserrat, sans-serif;
     font-size: 18px;
+    font-weight: 700;
 }
 h6,
 .h6 {
+    font-family: montserrat, sans-serif;
     font-size: 16px;
+    font-weight: 700;
 }
 
 // Header title

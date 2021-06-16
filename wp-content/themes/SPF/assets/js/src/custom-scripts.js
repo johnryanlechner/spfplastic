@@ -278,11 +278,12 @@
 				$(this).find('span').css({top:relY, left:relX});
 			});
             */
-    });
+    }); 
 
     $(window).on('scroll',function(){
+
         if ($(window).width() >= 1454) {
-            if($(window).scrollTop() >= 180 ) {
+            if($(window).scrollTop() >= 182) {
                 if (!$('body').hasClass('scrolled')) {
                     $('body').addClass('scrolled');
                 }  

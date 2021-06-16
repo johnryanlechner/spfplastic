@@ -21,33 +21,12 @@
 	
     <div id="main">
         <header id="header" role="banner"> 
-            <?php
-                if (is_front_page()) :
-            ?>
             <p class="site-title">
                 <a href="<?php bloginfo('url'); ?>/">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/images/logo-white.svg" alt="<?php echo bloginfo('name'); ?> logo" />
+                    <img src="<?php bloginfo('template_url'); ?>/assets/images/logo.png" alt="<?php echo bloginfo('name'); ?> logo" />
                 </a>
                 <span><?php echo bloginfo('name'); ?></span>
-            </p> 
-            <p class="site-title scrolled">
-                <a href="<?php bloginfo('url'); ?>/">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="<?php echo bloginfo('name'); ?> logo" />
-                </a>
-                <span><?php echo bloginfo('name'); ?></span>
-            </p> 
-            <?php
-                else: 
-            ?>
-            <p class="site-title">
-                <a href="<?php bloginfo('url'); ?>/">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="<?php echo bloginfo('name'); ?> logo" />
-                </a>
-                <span><?php echo bloginfo('name'); ?></span>
-            </p>
-            <?php
-                endif; 
-            ?>
+            </p>   
             <nav class="primary-nav">
                 <?php 
                     wp_nav_menu( array(
@@ -59,4 +38,18 @@
                     )); 
                 ?>
             </nav> 
+            <nav class="secondary-nav">
+                <div class="phone-number">
+                    <?= do_shortcode('[contact-phone]') ?>
+                </div>
+                <?php 
+                    wp_nav_menu( array(
+                        'container'       => 'ul', 
+                        'menu_class'      => 'sf-menu', 
+                        'menu_id'         => 'secondnav',
+                        'depth'           => 0,
+                        'theme_location' => 'secondary_menu' 
+                    )); 
+                ?>
+            </nav>
         </header>

@@ -17,7 +17,7 @@ function my_script() {
 	wp_enqueue_script( 'ftr', get_stylesheet_directory_uri().'/assets/js/ftr.min.js', '', filemtime(get_template_directory().'/assets/js/ftr.min.js'), true );
 	
 	/* Font */
-	wp_enqueue_style( 'google-fonts', '//use.typekit.net/yti5kbk.css', false, NULL ); 
+	wp_enqueue_style( 'adobe-fonts', '//use.typekit.net/lhq1obk.css', false, NULL ); 
 	/* CSS */
 	wp_enqueue_style( 'style', get_stylesheet_uri(), false, filemtime(get_stylesheet_directory().'/style.css') );		
 }

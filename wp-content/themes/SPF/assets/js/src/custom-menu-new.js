@@ -1,5 +1,4 @@
-(function(){
-    console.log('works');
+(function(){ 
     const mobileTrigger = document.getElementById('mobile-trigger'); 
     const mobileTriggerText = mobileTrigger.querySelector('.mobile-header__button__text');
     const mobileNavigation = document.getElementById('mobile-navigation'); 

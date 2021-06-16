@@ -82,7 +82,9 @@ function mandr_setup_theme() {
 	if ( function_exists( 'register_nav_menus' ) ) {
 	  	register_nav_menus(
 	  		array(
-	  		  'header_menu' => 'Header Menu',
+                'header_menu' => 'Header Menu',
+                'secondary_menu' => 'Secondary Menu',
+                'quicklinks' => 'Quicklinks',
 	  		)
 	  	);
 	}

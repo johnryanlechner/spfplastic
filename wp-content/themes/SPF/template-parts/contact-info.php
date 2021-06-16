@@ -3,16 +3,12 @@ $phone = get_option( 'options_mandr_phone' );
 $fax = get_option( 'options_mandr_fax' );
 $address = get_field( 'mandr_address', 'options' );
 $address_link = get_option( 'options_mandr_address_link' );
+$mailing_address = get_option( 'options_mandr_mailing_address' );
 $email = get_option( 'options_mandr_email' );
 
-if($phone || $address || $email):
+if($phone || $address ):
 	?>
-	<div class="contact-info">
-		<?php if( $phone ) : ?>
-			<p class="contact-email">
-				<?= phone_link($phone); ?>
-			</p>
-		<?php endif; ?>
+	<div class="footer-contact"> 
 		<?php if( $address ) : ?>
 			<p class="contact-address">
 				<?php if($address_link): ?>
@@ -24,11 +20,14 @@ if($phone || $address || $email):
 				<?php endif; ?>
 			</p>		
 		<?php endif; ?>
-		<?php if( $email ) : ?>
+        <?php if ( $mailing_address ) : ?>
+            <p class="mailing-address"><?= $mailing_address ?></p>
+        <?php endif; ?>
+        <?php if( $phone ) : ?>
 			<p class="contact-email">
-				<?= email_link($email); ?>
-			</p>		
-		<?php endif; ?>
+				<?= phone_link($phone); ?>
+			</p>
+		<?php endif; ?> 
 	</div>
 	<?php
 endif;
