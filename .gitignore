@@ -14,8 +14,8 @@ wp-content/plugins/**
 
 wp-content/themes/index.php
 wp-content/themes/twentytwenty
-!wp-content/themes/kistlock/ 
-!wp-content/themes/kistlock/**
+!wp-content/themes/SPF/ 
+!wp-content/themes/SPF/**
 
 *.log
 *.sql
