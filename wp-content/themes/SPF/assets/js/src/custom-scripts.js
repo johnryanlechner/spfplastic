@@ -279,18 +279,25 @@
 			});
             */
     }); 
+    var scrollPos = 0;
 
     $(window).on('scroll',function(){
-
+        
         if ($(window).width() >= 1454) {
-            if($(window).scrollTop() >= 182) {
-                if (!$('body').hasClass('scrolled')) {
-                    $('body').addClass('scrolled');
-                }  
-            } else {
+            if($(window).scrollTop() >= 182 ) {
+                $('body').addClass('scrolled'); 
+
+                if (document.body.getBoundingClientRect().top > scrollPos) {
+                    $('body').addClass('show-menu'); 
+                } else {
+                    $('body').removeClass('show-menu'); 
+                }
+            } else { 
                 $('body').removeClass('scrolled'); 
             }
         } 
+
+        scrollPos = (document.body.getBoundingClientRect()).top;
     });
 
     /*---------------------------------------------------------

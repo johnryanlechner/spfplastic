@@ -40,6 +40,7 @@ Site Header
     padding: 0 5%;
     display: block;
     background: $red;
+    box-shadow: 0px 0px 10px grey;
 
     z-index: 9;
 
@@ -77,11 +78,6 @@ Site Header
 
         ul.sf-menu li.menu-item:last-of-type a {
             margin-right: -44px;
-        }
-
-        ul.sf-menu li.menu-item.current-menu-item a:before {
-            width: 170px;
-            width: 60%;
         }
     } /* end primary nav */
 
@@ -210,15 +206,33 @@ body.scrolled {
 
     #header {
         position: fixed;
-        top: 0;
+        transform: translateY(-182px);
+        top: -182px;
         left: 0;
         width: 100%;
-        transform: translateY(-182px);
         box-shadow: 0px 0px 10px grey;
         padding: 14px 32px;
 
-        animation: slideDown 0.5s ease-in-out 1;
-        animation-fill-mode: forwards;
+        transition: all 0.3s ease-in-out;
+
+        p.site-title {
+            width: 120px;
+            padding: 0;
+        }
+
+        .primary-nav {
+            ul.sf-menu li.menu-item a {
+                padding: 16px;
+            }
+
+            ul.sf-menu li.menu-item:last-of-type a {
+                margin-right: -16px;
+            }
+        } /* end primary nav */
+    }
+
+    &.show-menu #header {
+        transform: translateY(182px);
     }
 
     #main {

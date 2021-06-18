@@ -1,0 +1,92 @@
+section.image-cards {
+    position: relative;
+
+    .inner {
+        padding: 0 5%;
+        display: flex;
+        justify-content: space-between;
+
+        .image-card {
+            width: 19%;
+            border: solid 2px $red;
+            border-bottom: solid 18px $red;
+            box-sizing: content-box;
+            position: relative;
+
+            a {
+                position: relative;
+                display: block;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: #fff;
+                    opacity: 0.7;
+                    z-index: 1;
+                }
+
+                .content {
+                    position: absolute;
+                    left: 0;
+                    bottom: 48px;
+                    width: 100%;
+                    padding: 0 24px;
+                    text-align: center;
+                    z-index: 2;
+
+                    h3 {
+                        font-family: anton, sans-serif;
+                        text-transform: uppercase;
+                        color: #000;
+                        font-size: 32px;
+                        font-weight: 400;
+                        margin-bottom: 24px;
+                    }
+
+                    .pseudo-button {
+                        position: relative;
+                        color: #000;
+                        text-transform: uppercase;
+                        border: solid 2px $red;
+                        display: inline-block;
+                        padding: 8px 32px;
+                        font-size: 16px;
+                        font-family: montserrat, sans-serif;
+                        transition: color 0.3s ease-in-out,
+                            background 0.3s ease-in-out;
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            top: 16px;
+                            left: -20px;
+                            width: 44px;
+                            height: 6px;
+                            background-image: url('assets/images/button-arrow-red.svg');
+                            background-size: contain;
+                            background-repeat: no-repeat;
+
+                            transition: background 0.3s ease-in-out;
+                        }
+                    }
+                }
+
+                &:hover,
+                &:focus {
+                    .content .pseudo-button {
+                        background: $red;
+                        color: #fff;
+
+                        &:before {
+                            background-image: url('assets/images/button-arrow-white.svg');
+                        }
+                    }
+                }
+            } /* end link */
+        } /* end image card */
+    } /* end inner */
+}
