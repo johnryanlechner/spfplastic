@@ -1,0 +1,138 @@
+section.product-slides {
+    position: relative;
+    overflow: hidden;
+
+    .inner {
+        display: flex;
+
+        .image-slider-outer,
+        .text-slider-outer {
+            width: 50%;
+            position: relative;
+        }
+
+        #image-window {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            transition: background 0.3s ease-in-out;
+        }
+
+        .image-slide img {
+            opacity: 0;
+        }
+
+        .text-slider-outer {
+            background: #000;
+
+            .text-slide {
+                color: #fff;
+                padding: 64px 64px 0;
+
+                h3 {
+                    color: #fff;
+                    font-family: anton, sans-serif;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    font-size: 36px;
+                }
+            }
+
+            #controls {
+                position: relative;
+                display: inline-block;
+                padding-left: 64px;
+                padding-bottom: 44px;
+
+                .slick-dots {
+                    position: relative;
+                    top: auto;
+                    bottom: auto;
+                    display: inline-block;
+                    padding-left: 32px;
+                    margin: 0;
+
+                    li {
+                        width: 16px;
+                        height: 16px;
+
+                        button {
+                            border: solid 2px #fff;
+                            border-radius: 50%;
+                            background: transparent;
+                            width: 16px;
+                            height: 16px;
+
+                            opacity: 1;
+
+                            transition: background 0.3s ease-in-out;
+
+                            &:before {
+                                content: '';
+                                opacity: 0;
+                            }
+                        }
+
+                        &.slick-active button {
+                            background: #fff;
+                        }
+                    }
+                }
+
+                button.slick-prev {
+                    position: absolute;
+                    top: 11px;
+                    left: 64px;
+                    bottom: auto;
+                    transform: none;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    background: #fff;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 45%;
+                        transform: translate(-50%, -50%);
+                        width: 8px;
+                        height: 12px;
+                        background-image: url('assets/images/chevron-left.svg');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                }
+
+                button.slick-next {
+                    position: absolute;
+                    top: 11px;
+                    right: -32px;
+                    left: auto;
+                    bottom: auto;
+                    transform: none;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    background: #fff;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) rotate(180deg);
+                        width: 8px;
+                        height: 12px;
+                        background-image: url('assets/images/chevron-left.svg');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                }
+            }
+        }
+    }
+}

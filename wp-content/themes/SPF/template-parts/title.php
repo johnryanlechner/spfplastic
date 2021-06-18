@@ -18,15 +18,17 @@
                     echo get_the_title();
                 }
             ?>
-        </h1>
-        <?php
-            if (get_field('secondary_intro_content')) :
-        ?>
-                <div class="intro-content">
-                    <?= get_field('secondary_intro_content') ?>
-                </div>
-        <?php
-            endif;
-        ?>
+        </h1> 
     </div>
 </div>
+<?php
+    if (get_field('secondary_intro_content')) :
+?>
+        <section class="intro-content">
+            <div class="container">
+                <?= get_field('secondary_intro_content') ?>
+            </div>
+        </section>
+<?php
+    endif;
+?>

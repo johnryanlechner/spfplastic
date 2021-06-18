@@ -371,8 +371,7 @@ function button_shortcode($atts, $content = null) {
 	
 	$output .= $p_align;
     $output .=  '<a '.$download.' href="'.$link.'" title="'.$text.'" class="button"'.$insert.$rel.'>';
-	$output .= $mobile;
-	$output .= '<span class="text-wrap">' . $text . '</span>';
+	$output .= $text; 
 	$output .= '</a>';
 	
 	if( $align !== 'false' ) {

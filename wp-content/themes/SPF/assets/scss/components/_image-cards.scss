@@ -62,13 +62,14 @@ section.image-cards {
                         &:before {
                             content: '';
                             position: absolute;
-                            top: 16px;
+                            top: 0;
                             left: -20px;
-                            width: 44px;
-                            height: 6px;
+                            width: 38px;
+                            height: 100%;
                             background-image: url('assets/images/button-arrow-red.svg');
                             background-size: contain;
                             background-repeat: no-repeat;
+                            background-position: center;
 
                             transition: background 0.3s ease-in-out;
                         }

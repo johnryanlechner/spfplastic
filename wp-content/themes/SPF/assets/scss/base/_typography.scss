@@ -109,6 +109,21 @@ h1,
 h2,
 .h2 {
     font-size: 40px;
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background: $red;
+    }
+
     @media (max-width: $mobile-med) {
         font-size: 32px;
     }
@@ -141,11 +156,6 @@ h6,
     font-weight: 700;
 }
 
-// Header title
-.header-title {
-    text-align: center;
-}
-
 /* Typographical Basics +
 --------------------------------------------- */
 
@@ -160,6 +170,10 @@ a {
 
     img {
         vertical-align: bottom;
+    }
+
+    &:not(.button) {
+        font-weight: 700;
     }
 }
 

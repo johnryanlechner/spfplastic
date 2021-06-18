@@ -29,7 +29,11 @@ if( have_rows('page_layouts') ):
                         
         /* Content With Background Image */ 
         elseif( get_row_layout() == 'content_with_background_image' ) :
-            get_template_part('template-parts/modules/content-with-background-image');  
+            get_template_part('template-parts/modules/content-with-background-image'); 
+            
+        /* Product Slider */ 
+        elseif( get_row_layout() == 'product_slider' ) :
+            get_template_part('template-parts/modules/product-slider');             
 
 
         endif; // end if switching statement over layout types

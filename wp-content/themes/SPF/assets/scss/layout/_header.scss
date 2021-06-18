@@ -152,33 +152,16 @@ Site Header
 }
 
 .header-title {
-    background: $black;
-    padding: 124px;
-
-    @media screen and (max-width: $laptop-m) {
-        padding: 196px 64px 124px;
-    }
-
-    @media screen and (max-width: $pre-ipad-break) {
-        padding: 196px 5% 124px;
-    }
+    background: $offWhite;
+    text-align: center;
+    padding: 64px;
 
     h1 {
-        color: #fff;
+        color: #000;
         position: relative;
-        margin-bottom: 64px;
-        font-size: 18px;
-
-        &:after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -24px;
-            width: 55px;
-            height: 10px;
-            background: $red;
-        }
+        margin: 0 auto;
+        max-width: 900px;
+        line-height: 1.5;
     }
 
     p {
@@ -198,6 +181,23 @@ Site Header
         &:focus {
             color: $offWhite;
         }
+    }
+}
+
+section.intro-content {
+    font-weight: 700;
+    color: $darkGrey;
+    padding: 96px 0;
+    line-height: 1.5;
+    font-size: 24px;
+
+    a {
+        font-style: italic;
+        text-decoration: underline;
+    }
+
+    p:last-of-type {
+        margin: 0;
     }
 }
 
