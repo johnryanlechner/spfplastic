@@ -85,6 +85,7 @@ function mandr_setup_theme() {
                 'header_menu' => 'Header Menu',
                 'secondary_menu' => 'Secondary Menu',
                 'quicklinks' => 'Quicklinks',
+                'mobile_menu' => 'Mobile Menu',
 	  		)
 	  	);
 	}

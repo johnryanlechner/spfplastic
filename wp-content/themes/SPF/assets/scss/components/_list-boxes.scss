@@ -1,0 +1,53 @@
+section.listed-boxes {
+    position: relative;
+
+    .boxes {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: $second-break) {
+            display: block;
+        }
+
+        .box {
+            width: 32%;
+            border: solid 2px $red;
+            padding: 48px 32px;
+            margin-bottom: 64px;
+            position: relative;
+            z-index: 1;
+
+            @media screen and (max-width: $second-break) {
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto 64px;
+            }
+
+            .number {
+                position: absolute;
+                top: 16px;
+                left: 16px;
+                font-family: anton, sans-serif;
+                line-height: 1;
+                color: $offWhite;
+                font-size: 224px;
+                z-index: -1;
+            }
+
+            .title h3 {
+                color: $red;
+            }
+
+            .content p:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .content a {
+                font-weight: 400;
+                font-style: italic;
+                text-decoration: underline;
+            }
+        }
+    }
+}

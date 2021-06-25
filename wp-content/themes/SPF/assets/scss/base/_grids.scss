@@ -15,6 +15,10 @@ Version 1.2.5
     &.slim {
         width: 1100px;
     }
+
+    @media screen and (max-width: $laptop-s) {
+        padding: 0 5%;
+    }
 }
 
 /* Width variables
@@ -133,13 +137,6 @@ $column-left-margin: 3.5087719298246%;
 .two-thirds:first-child {
     clear: both;
     margin-left: 0;
-}
-
-@media only screen and (max-width: $first-break) {
-    .container,
-    #header .container {
-        width: 960px;
-    }
 }
 
 @media only screen and (max-width: $mobile-break) {

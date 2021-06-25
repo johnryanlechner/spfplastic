@@ -2,7 +2,7 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .mobile-header {
-    background-color: #fff;
+    background-color: $red;
     display: block;
     position: fixed;
     z-index: 110;
@@ -149,20 +149,12 @@
     }
 
     &__logo {
-        max-width: 300px;
+        max-width: 120px;
         margin: 0;
         padding-left: 24px;
 
         @media screen and (max-width: $laptop-m) {
             padding-left: 0;
-        }
-
-        @media screen and (max-width: $mobile-small) {
-            max-width: 220px;
-        }
-
-        @media screen and (max-width: $mobile-tiny) {
-            max-width: 185px;
         }
     }
 
@@ -207,12 +199,12 @@
 
         &:before {
             content: '';
-            width: 26px;
-            height: 3px;
+            width: 50px;
+            height: 10px;
             border-radius: 0;
             background: #fff;
             position: absolute;
-            top: 16px;
+            top: 2px;
             left: 50%;
             transform: translateX(-50%);
             clip-path: none;
@@ -222,23 +214,18 @@
 
         &:after {
             content: '';
-            width: 26px;
-            height: 3px;
+            width: 50px;
+            height: 10px;
             border-radius: 0px;
             background: #fff;
             border: none;
             position: absolute;
             top: auto;
-            bottom: 16px;
+            bottom: 2px;
             left: 50%;
             transform: translateX(-50%);
 
             transition: all 0.3s ease-in-out;
-        }
-
-        &:hover,
-        &:focus {
-            background: $black;
         }
 
         @media screen and (max-width: $laptop-m) {
@@ -259,20 +246,20 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                width: 26px;
+                width: 50px;
+                height: 10px;
                 border-radius: 0px;
                 background: #fff;
-                height: 3px;
                 transform: translate(-50%, -50%);
             }
         }
     }
 }
 .mobile-menu {
-    background-color: $black;
+    background-color: $darkGrey;
     position: fixed;
     z-index: 201;
-    top: 83px;
+    top: 107px;
     right: 0;
     display: flex;
     flex-direction: column;
@@ -375,7 +362,7 @@
 
         // Child menu styling
         &__sub-menu {
-            background-color: $red;
+            background-color: transparent;
             //position: fixed;
             z-index: 1;
             top: 0;
@@ -536,11 +523,11 @@
 }
 body.nav-active #mobile-trigger {
     &:before {
-        transform: translate(-50%, 7px) rotate(45deg);
+        transform: translate(-50%, 14px) rotate(45deg);
     }
 
     &:after {
-        transform: translate(-50%, -9px) rotate(-45deg);
+        transform: translate(-50%, -18px) rotate(-45deg);
     }
 
     .mobile-header__button__text {
@@ -565,7 +552,6 @@ body.nav-active #mobile-trigger {
         left: 0;
         width: 100%;
         height: 2px;
-        background: $red;
         opacity: 0.3;
         /* 
         @media screen and (max-width: $second-break) {

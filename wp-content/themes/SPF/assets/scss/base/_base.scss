@@ -31,7 +31,7 @@ $mob-spacing: 24px;
 .double-top-padding {
     padding-top: 124px;
 
-    @media screen and (max-width: $mobile-break) {
+    @media screen and (max-width: $laptop-m) {
         padding-top: 64px;
     }
 }
@@ -48,7 +48,7 @@ $mob-spacing: 24px;
 .double-bot-padding {
     padding-bottom: 124px;
 
-    @media screen and (max-width: $mobile-break) {
+    @media screen and (max-width: $laptop-m) {
         padding-bottom: 64px;
     }
 }
@@ -111,4 +111,34 @@ hr {
     border-top: 1px solid $mainColor;
     margin: 8px 0 10px;
     padding: 0;
+}
+
+.section-wrap.row-reverse .columns__wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    @media screen and (max-width: $mobile-break) {
+        display: block;
+    }
+
+    .column {
+        margin-left: 0;
+    }
+}
+
+.section-wrap.standard-layout a:not(.button) {
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+@media screen and (max-width: $laptop-m) {
+    #main {
+        padding-top: 124px;
+    }
+
+    body.not-home #main {
+        padding-top: 109px;
+    }
 }

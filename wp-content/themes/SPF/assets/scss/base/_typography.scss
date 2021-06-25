@@ -111,12 +111,13 @@ h2,
     font-size: 40px;
     position: relative;
     text-transform: uppercase;
-    margin-bottom: 36px;
+    margin-bottom: 64px;
+    text-align: center;
 
     &:after {
         content: '';
         position: absolute;
-        bottom: -12px;
+        bottom: -24px;
         left: 50%;
         transform: translateX(-50%);
         width: 100px;

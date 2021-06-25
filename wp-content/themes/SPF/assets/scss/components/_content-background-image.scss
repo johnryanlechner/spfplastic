@@ -3,6 +3,10 @@ section.content-background-image {
 
     .inner {
         padding: 0 5%;
+
+        @media screen and (max-width: $mobile-break) {
+            padding: 0;
+        }
     }
 
     .image-content {
@@ -10,6 +14,14 @@ section.content-background-image {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+
+        @media screen and (max-width: $laptop-s) {
+            padding: 64px;
+        }
+
+        @media screen and (max-width: $mobile-break) {
+            padding: 64px 0;
+        }
     }
 
     .content {
@@ -19,6 +31,18 @@ section.content-background-image {
         padding: 96px;
         position: relative;
         z-index: 1;
+
+        @media screen and (max-width: $laptop-s) {
+            max-width: 100%;
+        }
+
+        @media screen and (max-width: $mobile-break) {
+            padding: 64px;
+        }
+
+        @media screen and (max-width: $mobile-med) {
+            padding: 64px 5%;
+        }
 
         &:before {
             content: '';

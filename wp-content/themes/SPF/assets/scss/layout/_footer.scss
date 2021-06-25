@@ -24,6 +24,15 @@
         color: #fff;
         text-transform: uppercase;
         margin: 0 24px 0 0;
+
+        @media screen and (max-width: $laptop-s) {
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: $mobile-break) {
+            margin: 0 auto 12px;
+            text-align: center;
+        }
     }
 
     .quicklinks-outer {
@@ -34,9 +43,28 @@
         margin-bottom: 32px;
         justify-content: center;
 
+        @media screen and (max-width: $laptop-s) {
+            align-items: center;
+            padding: 8px 0 0;
+        }
+
+        @media screen and (max-width: $mobile-break) {
+            display: block;
+            border: none;
+            text-align: center;
+        }
+
         nav.quicklinks li.menu-item {
             margin-right: 36px;
             position: relative;
+
+            @media screen and (max-width: $mobile-break) {
+                margin-right: 0;
+                display: block;
+                text-align: center;
+                float: none;
+                margin-bottom: 8px;
+            }
 
             &:after {
                 content: '';
@@ -47,6 +75,10 @@
                 height: 24px;
                 background: #fff;
                 transform: translateY(-50%);
+
+                @media screen and (max-width: $mobile-break) {
+                    display: none;
+                }
             }
 
             &:last-of-type {

@@ -7,29 +7,37 @@
     $include_padding .= $padding_top; 
     $include_padding .= ' ';
     $include_padding .= $padding_bottom;
-
-    $background_color = get_sub_field('background_color');
-
-    $image_one = get_sub_field('image_one');
-    $image_two = get_sub_field('image_two');
-    $image_three = get_sub_field('image_three');
+ 
+    $table_title = get_sub_field('table_title');
+    $column_1_title = get_sub_field('column_1_title');
+    $column_2_title = get_sub_field('column_2_title');
+    $column_3_title = get_sub_field('column_3_title');
 ?>
-<section class="section-wrap specs-table <?= $include_padding ?>">
+<section class="section-wrap specs-table <?= $include_padding ?>"> 
     <div class="container">
-        <h2><?= get_sub_field('title') ?></h2>
+        <h2><?= $table_title ?></h2>
         <div class="pseudo-table">
-            <?php
+            <div class="row header">
+                <div class="cell one"><?= $column_1_title ?></div>
+                <div class="cell two"><?= $column_2_title ?></div>
+                <div class="cell three"><?= $column_3_title ?></div>
+            </div> 
+            <?php 
                 if (have_rows('rows')) : $count = 0;
                     while (have_rows('rows')) : the_row();
-                        $name = get_sub_field('name');
-                        $specification = get_sub_field('specification');
+                        $column_1_cell = get_sub_field('column_1_cell');
+                        $column_2_cell = get_sub_field('column_2_cell');
+                        $column_3_cell = get_sub_field('column_3_cell');                        
             ?>   
                         <div class="row <?php if ($count % 2 == 0) { echo 'white'; } ?>">
-                            <div class="name cell">
-                                <?= $name ?>
+                            <div class="cell left">
+                                <?= $column_1_cell ?>
                             </div>
-                            <div class="specification cell">
-                                <?= $specification ?>
+                            <div class="cell middle">
+                                <?= $column_2_cell ?>
+                            </div>
+                            <div class="cell right">
+                                <?= $column_3_cell ?>
                             </div>
                         </div>     
             <?php

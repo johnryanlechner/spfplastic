@@ -1,78 +1,34 @@
 section.section-wrap.standard-callout {
     position: relative;
 
-    @media screen and (max-width: $second-break) {
-        background: $black;
-    }
-
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 50%;
-        height: 100%;
-        background: $black;
-    }
-
     .standard-callout__content {
-        position: relative;
-        padding: 124px;
-        background: $black;
-        color: #fff;
-        z-index: 1;
+        padding: 64px;
+        border: solid 2px $red;
+        text-align: center;
 
-        @media screen and (max-width: $mobile-break) {
-            padding: 96px 64px;
+        @media screen and (max-width: $mobile-med) {
+            padding: 48px;
         }
 
-        &:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 115px;
-            height: 100%;
-            background: #fff;
-            z-index: 2;
-
-            @media screen and (max-width: $second-break) {
-                display: none;
-            }
-        }
-
-        &:after {
-            content: '';
-            background-image: url('assets/images/red-rectangle.svg');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translateY(-50%);
-            width: 230px;
-            height: 250px;
-            z-index: 3;
-
-            @media screen and (max-width: $second-break) {
-                display: none;
-            }
-        }
-
-        h2,
         h3,
-        p {
-            color: #fff;
+        h2 {
+            font-family: montserrat, sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+
+            &:last-of-type {
+                margin: 0;
+            }
         }
 
         a {
+            font-style: italic;
             text-decoration: underline;
-        }
 
-        a:hover,
-        a:focus {
-            color: $offWhite;
+            &:hover,
+            &:focus {
+                color: $darkGrey;
+            }
         }
     }
 }

@@ -1,0 +1,22 @@
+section.associations-memberships {
+    position: relative;
+
+    .logos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 32px;
+
+        @media screen and (max-width: $laptop-s) {
+            flex-wrap: wrap;
+        }
+
+        .box {
+            padding: 0 24px;
+
+            @media screen and (max-width: $laptop-s) {
+                width: 20%;
+            }
+        }
+    }
+}

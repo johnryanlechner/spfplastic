@@ -1,0 +1,61 @@
+section.letter-of-appreciation {
+    position: relative;
+
+    h2.section-title {
+        text-align: center;
+        margin-bottom: 48px;
+        font-size: 400;
+    }
+
+    .letter {
+        position: relative;
+        padding: 96px;
+        width: 100%;
+        max-width: 1040px;
+        margin: 0 auto;
+        color: $darkGrey;
+        box-shadow: 0 0 10px grey;
+
+        @media screen and (max-width: $mobile-break) {
+            padding: 64px;
+        }
+
+        &.with-images {
+            position: relative;
+            padding-bottom: 224px;
+
+            @media screen and (max-width: $mobile-break) {
+                padding-bottom: 64px;
+            }
+        }
+    }
+
+    .bottom-images {
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        margin-bottom: -48px;
+
+        @media screen and (max-width: $mobile-break) {
+            display: block;
+            margin: 64px 0;
+            transform: none;
+        }
+
+        .image-left,
+        .image-right {
+            width: 47.5%;
+
+            @media screen and (max-width: $mobile-break) {
+                width: 100%;
+                margin: 32px auto;
+                max-width: 400px;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}

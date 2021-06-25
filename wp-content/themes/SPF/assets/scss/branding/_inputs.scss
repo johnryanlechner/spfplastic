@@ -52,3 +52,10 @@ input[type='search']::-webkit-search-results-button {
         pointer-events: none;
     }
 }
+
+@media screen and (max-width: $mobile-break) {
+    .column ul,
+    .column ol {
+        margin-bottom: 0;
+    }
+}

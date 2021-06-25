@@ -2,7 +2,7 @@
 /**
  * If you need to add additional menu items, just add another wp_get_nav_menu_items function and pass menu title as string
  */
-$primary_navigation = wp_get_nav_menu_items('primary-menu'); 
+$primary_navigation = wp_get_nav_menu_items('mobile-menu'); 
 ?> 
 
     <div id="mobile-header" class="mobile-nav__header mobile-header"> 
@@ -12,8 +12,7 @@ $primary_navigation = wp_get_nav_menu_items('primary-menu');
                     <img src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="<?php echo bloginfo('name'); ?> logo" />
                 </a>
                 <span class="sr-only"><?php echo bloginfo('name'); ?></span>
-            </p> 
-            <a href="/product/" class="product-button">View Product</a> 
+            </p>   
             <button id="mobile-trigger" type="button" class="mobile-header__button button">
                 <span class="mobile-header__button__text">Menu</span>
             </button>

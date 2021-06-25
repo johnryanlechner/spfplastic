@@ -1,0 +1,49 @@
+section.description-boxes {
+    position: relative;
+
+    .boxes {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: $second-break) {
+            display: block;
+        }
+
+        .box {
+            width: 32%;
+            border: solid 2px $red;
+            text-align: center;
+            padding: 48px;
+
+            @media screen and (max-width: $second-break) {
+                width: 100%;
+                margin: 32px auto;
+                max-width: 400px;
+            }
+
+            .title h3 {
+                font-size: 30px;
+                font-family: anton, sans-serif;
+                font-weight: 400;
+                position: relative;
+                margin-bottom: 44px;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: -22px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 100px;
+                    height: 3px;
+                    background: $red;
+                }
+            }
+
+            .content p:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

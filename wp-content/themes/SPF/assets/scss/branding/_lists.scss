@@ -30,14 +30,14 @@ ul:not([class]) {
 
         &:before {
             content: '';
-            background-color: #000;
+            background-color: $red;
             position: absolute;
             display: inline-block;
             top: 12px;
             left: 0;
 
-            width: 5px;
-            height: 5px;
+            width: 8px;
+            height: 8px;
             line-height: 0;
             text-indent: 0;
         }

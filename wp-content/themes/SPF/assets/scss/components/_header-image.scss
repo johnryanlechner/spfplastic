@@ -13,6 +13,10 @@ section.header-image {
             background-repeat: no-repeat;
             background-size: cover;
 
+            @media screen and (max-width: $laptop-s) {
+                min-height: 600px;
+            }
+
             &:before {
                 content: '';
                 position: absolute;
@@ -61,6 +65,18 @@ section.header-image {
                 h2 {
                     font-size: 76px;
                     margin-bottom: 24px;
+
+                    &:after {
+                        display: none;
+                    }
+
+                    @media screen and (max-width: $mobile-med) {
+                        font-size: 56px;
+                    }
+
+                    @media screen and (max-width: $mobile-small) {
+                        font-size: 44px;
+                    }
                 }
             }
         }
