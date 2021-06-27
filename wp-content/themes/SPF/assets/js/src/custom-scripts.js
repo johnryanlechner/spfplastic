@@ -280,7 +280,22 @@
 
                 $imageWindow.attr('style','background-image: url('+ backgroundImage +');');
             });
-            $('.image-slider').slick('slickNext'); 
+            //$('.image-slider').slick('slickNext'); 
+        }
+
+        if ($('.products-overview').length > 0) {
+            var $toggles = $('#buttons').find('.info-toggle');;
+
+            $toggles.each(function(){
+                var $this = $(this);
+
+                $this.on('click',function(){
+                    $('.infowindow').removeClass('active');
+                    
+                    var $parent = $(this).parent();
+                    $parent.find('.infowindow').addClass('active');
+                });            
+            });            
         }
     }); 
     var scrollPos = 0;

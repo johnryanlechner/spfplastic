@@ -1,0 +1,76 @@
+section.products-overview {
+    position: relative;
+
+    .button-wrap {
+        text-align: center;
+    }
+
+    svg {
+        overflow: visible;
+        position: relative;
+        z-index: 2;
+    }
+
+    foreignObject {
+        overflow: visible;
+    }
+
+    circle.glow {
+        animation: glow 2.25s ease-in-out infinite 0.3s;
+    }
+
+    circle.info-toggle {
+        cursor: pointer;
+    }
+
+    .infowindow {
+        background: $lightGrey;
+        text-align: center;
+        padding: 24px;
+        max-height: 1px;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        position: relative;
+
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: -13px;
+            width: 26px;
+            height: 26px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            background: $red;
+        }
+
+        h3,
+        p {
+            margin: 0;
+        }
+
+        &.active {
+            overflow: visible;
+            max-height: 1000px;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

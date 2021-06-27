@@ -8,4 +8,9 @@ section.standard-layout {
     h3 {
         color: $red;
     }
+
+    ul li,
+    ol li {
+        font-size: 18px;
+    }
 }

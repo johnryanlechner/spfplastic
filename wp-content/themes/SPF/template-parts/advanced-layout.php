@@ -53,7 +53,12 @@ if( have_rows('page_layouts') ):
             
         /* Associations & Memberships */ 
         elseif( get_row_layout() == 'associations_memberships' ) :
-            get_template_part('template-parts/modules/associations-memberships');               
+            get_template_part('template-parts/modules/associations-memberships');
+            
+            
+        /* Homepage Products Descriptions */ 
+        elseif( get_row_layout() == 'homepage_products_descriptions' ) :
+            get_template_part('template-parts/modules/home-products-overview');            
 
 
         endif; // end if switching statement over layout types

@@ -7,6 +7,11 @@ section.associations-memberships {
         align-items: center;
         padding: 0 32px;
 
+        @media screen and (max-width: $mobile-small) {
+            justify-content: center;
+            padding: 0 5%;
+        }
+
         @media screen and (max-width: $laptop-s) {
             flex-wrap: wrap;
         }
@@ -16,6 +21,15 @@ section.associations-memberships {
 
             @media screen and (max-width: $laptop-s) {
                 width: 20%;
+            }
+
+            @media screen and (max-width: $mobile-break) {
+                width: 32%;
+            }
+
+            @media screen and (max-width: $mobile-small) {
+                width: 48%;
+                padding: 16px;
             }
         }
     }

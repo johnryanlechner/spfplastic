@@ -65,3 +65,13 @@ body.page-contact-us .gform_wrapper {
         margin: 0;
     }
 }
+
+body.page-plastic-injection-molding section.listed-boxes .box {
+    width: 48%;
+
+    @media screen and (max-width: $second-break) {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 64px;
+    }
+}

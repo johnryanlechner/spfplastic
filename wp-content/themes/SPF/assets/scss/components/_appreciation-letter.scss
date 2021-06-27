@@ -20,12 +20,20 @@ section.letter-of-appreciation {
             padding: 64px;
         }
 
+        @media screen and (max-width: $mobile-med) {
+            padding: 32px;
+        }
+
         &.with-images {
             position: relative;
             padding-bottom: 224px;
 
             @media screen and (max-width: $mobile-break) {
                 padding-bottom: 64px;
+            }
+
+            @media screen and (max-width: $mobile-med) {
+                padding-bottom: 32px;
             }
         }
     }
