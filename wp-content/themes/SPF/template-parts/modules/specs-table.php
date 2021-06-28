@@ -31,13 +31,16 @@
             ?>   
                         <div class="row <?php if ($count % 2 == 0) { echo 'white'; } ?>">
                             <div class="cell left">
-                                <?= $column_1_cell ?>
+                                <span class="mobile-label"><?= $column_1_title ?>:</span>
+                                <span class="value"><?= $column_1_cell ?></span>
                             </div>
                             <div class="cell middle">
-                                <?= $column_2_cell ?>
+                                <span class="mobile-label"><?= $column_2_title ?>:</span>
+                                <span class="value"><?= $column_2_cell ?></span>
                             </div>
                             <div class="cell right">
-                                <?= $column_3_cell ?>
+                                <span class="mobile-label"><?= $column_3_title ?>:</span>
+                                <span class="value"><?= $column_3_cell ?></span>
                             </div>
                         </div>     
             <?php
