@@ -23,6 +23,12 @@ section.products-overview {
         cursor: pointer;
     }
 
+    @media screen and (max-width: $pre-ipad-break) {
+        circle {
+            display: none;
+        }
+    }
+
     .infowindow {
         background: $lightGrey;
         text-align: center;
