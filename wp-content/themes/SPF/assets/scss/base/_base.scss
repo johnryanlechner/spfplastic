@@ -142,3 +142,30 @@ hr {
         padding-top: 109px;
     }
 }
+
+.fade-in-able {
+    opacity: 0;
+    transform: translateY(48px);
+
+    &.scrolled {
+        animation: fadeInUp 1s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    @media screen and (max-width: $second-break) {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(48px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

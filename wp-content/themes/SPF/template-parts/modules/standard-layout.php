@@ -55,7 +55,7 @@ switch($column_count) :
         break;
 endswitch;
 ?>
-<section <?= $id; ?> class="section-wrap standard-layout columns <?= $include_padding; ?> <?= $section_classes; ?>">
+<section <?= $id; ?> class="section-wrap standard-layout columns fade-in-able <?= $include_padding; ?> <?= $section_classes; ?>">
     <div class="columns__container container">
         <?php
         if( valid_element($column_heading) && $column_count !== 1 ) :

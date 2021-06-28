@@ -269,6 +269,33 @@
 				$(this).find('span').css({top:relY, left:relX});
 			});
         */
+
+        // ---------------------------------------------------------
+		// Fadeable Sections
+		// ---------------------------------------------------------
+		if ($(window).width() > 1023) {
+
+			$(window).on('load',function(){
+
+				$('.fade-in-able').each(function(){
+					var $this = $(this);
+					var distanceFromTop = $this.offset().top;
+
+					$this.attr('data-scrollTop' , distanceFromTop); 
+				});
+
+				$(window).on('scroll' , function(){
+
+					$('.fade-in-able').each(function(){
+						var $this = $(this); 
+							if ($(window).scrollTop() + 800 > $this.attr('data-scrollTop') ) {
+								$this.addClass('scrolled');
+							}
+					});			
+				}); 
+			});
+
+		}
         
         if ($('.product-slides').length > 0) {
             var $imageWindow = $('#image-window');

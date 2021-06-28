@@ -13,7 +13,7 @@
     $bottom_left_image = get_sub_field('bottom_left_image');
     $bottom_right_image = get_sub_field('bottom_right_image');
 ?>
-<section class="section-wrap letter-of-appreciation <?= $include_padding; ?>" >
+<section class="section-wrap letter-of-appreciation fade-in-able <?= $include_padding; ?>" >
     <div class="container">
 <?php
     if ($title) :

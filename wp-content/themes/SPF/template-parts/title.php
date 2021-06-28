@@ -24,7 +24,7 @@
 <?php
     if (get_field('secondary_intro_content')) :
 ?>
-        <section class="intro-content">
+        <section class="intro-content fade-in-able">
             <div class="container">
                 <?= get_field('secondary_intro_content') ?>
             </div>

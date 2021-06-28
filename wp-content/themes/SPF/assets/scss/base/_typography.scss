@@ -132,6 +132,20 @@ h2,
         font-size: 26px;
     }
 }
+.section-wrap.standard-layout h2 a:not(.button),
+.section-wrap.standard-layout h3 a:not(.button) {
+    color: #000;
+    text-decoration: none;
+    font-style: normal;
+
+    &:hover,
+    &:focus {
+        color: $red;
+    }
+}
+.section-wrap.standard-layout h3 a:not(.button) {
+    font-weight: 700;
+}
 h3,
 .h3 {
     font-family: montserrat, sans-serif;

@@ -8,7 +8,7 @@
     $include_padding .= ' ';
     $include_padding .= $padding_bottom;
 ?>
-<section class="section-wrap description-boxes <?= $include_padding; ?>" >
+<section class="section-wrap description-boxes fade-in-able <?= $include_padding; ?>" >
     <div class="container">
         <div class="boxes">
             <?php

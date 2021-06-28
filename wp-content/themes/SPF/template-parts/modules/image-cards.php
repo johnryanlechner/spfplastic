@@ -8,7 +8,7 @@
     $include_padding .= ' ';
     $include_padding .= $padding_bottom;
 ?>
-<section class="section-wrap image-cards <?= $include_padding; ?>"> 
+<section class="section-wrap image-cards fade-in-able <?= $include_padding; ?>"> 
     <div class="inner">
         <?php
             if (have_rows('cards')) :

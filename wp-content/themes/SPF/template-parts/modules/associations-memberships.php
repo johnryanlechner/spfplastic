@@ -8,7 +8,7 @@
     $include_padding .= ' ';
     $include_padding .= $padding_bottom;
 ?>
-<section class="section-wrap associations-memberships <?= $include_padding; ?>" >
+<section class="section-wrap associations-memberships fade-in-able <?= $include_padding; ?>" >
     <h2>Associations & Memberships</h2>
     <div class="logos">
         <?php
